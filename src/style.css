@@ -72,12 +72,12 @@ h1.title{
 
 nav{
     display: flex;
-
+    margin-left: 1000px;
 }
 
 .menu{
-    width: 250px;
-    height: 40px;
+    width: 200px;
+    height: 45px;
     right: 300px;
     top: 25px;
     border-radius: 5px;
@@ -89,36 +89,32 @@ nav{
     top: 20px;
 }
 .menu a {
-    width: 250px;
-    height: 40px;
-    display: flex;
+    width: 200px;
+    height: 45px;
     padding: 1em;
-    background-color: #F9B53C;
+    background: #4891D1;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 15px;
     text-decoration: none;
     color: #ffffff;
     border-radius: 5px;
+    display: flex;
 }
+
 .menu a:hover {
-    width: 250px;
-    height: 40px;
-    background-color: #CC673B;
+    width: 200px;
+    height: 45px;
+    background-color: #484DD1;
 }
 .menu ul li ul {
-    width: 250px;
-    height: 40px;
+    width: 200px;
+    height: 45px;
     display: none;
 }
 .menu ul li a:hover + ul, .menu ul li ul:hover {
-    width: 250px;
-    height: 40px;
+    width: 200px;
+    height: 45px;
     display: block;
-}
-
-.container--btns{
-    margin: 5px 50px;
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .container--cards{
@@ -132,9 +128,50 @@ nav{
     border-style: dashed;
 }
 
-article.pokemon{
+.pokemoncard{
     margin: 60px;
     border-style: outset;
+    border-radius:16px;
+    box-shadow:  9px 9px 21px #D14891;
+    background-color:#FFA500;
+    border: 2px solid #484DD1;
+    width:10em;
+    height:15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-text{
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #48D1CC;
+    border: 5px groove #FF6347;
+    padding-top: 10px;
+    margin: 1em auto 1em;
+}
+
+.rectangle {
+    width: 120px; 
+    height: 60px; 
+    border: 1px ridge #FF6347;
+    background: #4891D1;
+    border-radius:7px;
+    margin: 1em auto 1em;
+}
+
+.container--btns{
+    margin: 5px 50px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 button{
@@ -145,81 +182,84 @@ button{
     margin: 8px;
     border: 0;
     font-weight: bold;
-    color: rgb(233, 228, 238);
     cursor: pointer;
+    color: #fff;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
 }
 
 button.grass{
-    background-color: rgb(40 112 55);
+    background-color: #246966;
 }
 
 button.poison{
-    background-color: rgb(201 128 255);
+    background-color: #cc48d1;
 }
 
 button.fire{
-    background-color: #f38508;
+    background-color:#FF5733;
 }
 
 button.flying{
-    background-color: rgb(17 164 226);
+    background-color: #48d1cc;
 }
 
 button.water{
-    background-color: rgb(44 86 217);
+    background-color: #484DD1;
 }
 
 button.bug{
-    background-color: rgb(118 180 26 / 87%);
+    background-color: #92D148;
 }
 
 button.normal{
-    background-color: rgb(236 86 133 / 81%);
+    background-color: #D14891;
 }
 
 button.electric{
-    color: rgb(9, 7, 10);
-    background-color: rgb(245 242 54);
+    background-color: #FFC300 ;
 }
 
 button.ground{
-    background-color: rgb(115 64 64);
+    background-color: #798A89;
 }
 
 button.fighting{
-    background-color: rgb(201 18 18);
+    background-color: #D1484D;
 }
 
 button.psychic{
-    background-color: rgb(234 37 179);
+    background-color: #C70039 ;
 }
 
 button.rock{
-    background-color: rgb(209 183 44);
+    background-color: #d1cc48;
 }
 
 button.ghost{
-    background-color: rgb(73 25 86 / 74%);
+    background-color: #8848D1;
 }
 
 button.ice{
-    background-color: rgb(7 181 193 / 82%);
+    background-color: #4891D1;
 }
 
 button.dragon{
-    background-color: rgb(251 23 23 / 75%);
+    background-color:#900C3F;
 }
 
 button.dark{
-    background-color: rgb(20 22 21);
+    background-color: #091A1A;
 }
 
 button.steel{
-    background-color: rgb(74 79 105 / 62%);
+    background-color: #123433;
 }
 
 button.fairy{
-    background-color: rgb(121 64 191 / 83%);
+    background-color: #6548D1;
 }
 
 .kantostart{
@@ -248,47 +288,6 @@ button.fairy{
     left: 900px;
     top: 432px;
     border-radius: 25px;
-}
-
-
-.tarjetas {
-    display: flex;
-    flex-direction: column auto;
-    align-items: start ;
-    background-color:pink;
-    padding: 3em;
-}
-
-.property-card
-{
-  height:16em;
-  width:12em;
-  display:flex;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:  9px 9px 21px #4682B4;
-  background-color:#FFA500;
-  justify-content: center;
-  border: 2px solid #4682B4;
-}
-
-.circulo {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background: #48D1CC;
-    border: 5px groove #FF6347;
-    padding-top: 10px;
-    margin: 1em auto 2em;
-}
-
-.rectangulo {
-    width: 90px; 
-    height: 40px; 
-    border: 1px ridge #FF6347;
-    background: #428bca;
-    border-radius:7px;
-    margin: 8em auto 1em;
 }
 
 

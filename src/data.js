@@ -19,27 +19,29 @@ export function printData (){
   let tarjets =""
   let pokemons=data.pokemon.forEach(p=>{
     tarjets +=`
-    <article class="pokemon">
+    <div class="pokemon"></div>
     <img src ="${p.img}">
     <h2 class = "card-title">${p.name}</p>
     <p class = "card-text">${p.num}</p
     <p class = "card-text">${p.type}</p>
-    </article>`
+    </div>`
     tarjetas.innerHTML=tarjets;
   });
   return pokemons
 }
-
+/*función que muestra la card*/
  export function filterGeneration(zone){
   let tarjets =""
    let pokemonsFiltered=data.pokemon.filter((unSoloBenditoPokemon)=>{
     tarjets +=`
-    <article class="pokemon">
-    <img src ="${unSoloBenditoPokemon.img}">
-    <h2 class = "card-title">${unSoloBenditoPokemon.name}</p>
-    <p class = "card-text">${unSoloBenditoPokemon.num}</p
-    <p class = "card-text">${unSoloBenditoPokemon.type}</p>
-    </article>`
+    <div class="pokemoncard">
+    <img src =${unSoloBenditoPokemon.img} class="circle"/>
+    <div class="rectangle">
+    <h4 class = "card-text">${unSoloBenditoPokemon.name}</h4>
+    <h5 class = "card-text">${unSoloBenditoPokemon.num}</h4>
+    <h5 class = "card-text">${unSoloBenditoPokemon.type}</5></div>
+    </div>
+    `;
     filterkanto.innerHTML=tarjets;
      return unSoloBenditoPokemon.generation.name===zone
    })
