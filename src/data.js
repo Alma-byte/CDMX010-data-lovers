@@ -1,9 +1,4 @@
-/*El corazón de este proyecto es la manipulación de datos a través de arreglos y objetos.
-Este archivo contiene toda la funcionalidad que corresponda a:
-Obtener.
-Procesar.
-Manipular datos.
-Funciones Como:
+/*Manipulación de datos a través de arreglos y objetos.
 - FilterData(data, condition): Filter recibira la data, y retornará aquellos datos que cumplan con la condición.
 - SortData(data, sortBy, sortOrder): Sort u ordenar recibe tres parámetros. 
     data, nos entrega los datos.
@@ -14,43 +9,57 @@ Las funciones son independientes del DOM y serán usadas desde src/main.js para:
  -cargar la página
  -cada vez que el usuario interactúe (click, filtrado, ordenado, ...).*/
  import data from './data/pokemon/pokemon.js';
-
-export function printData (){
-  let tarjets =""
-  let pokemons=data.pokemon.forEach(p=>{
-    tarjets +=`
-    <div class="pokemon"></div>
-    <img src ="${p.img}">
-    <h2 class = "card-title">${p.name}</p>
-    <p class = "card-text">${p.num}</p
-    <p class = "card-text">${p.type}</p>
-    </div>`
-    tarjetas.innerHTML=tarjets;
-  });
-  return pokemons
-}
-/*función que muestra la card*/
+ export const pokemons = data.pokemon;
+ 
+ //Filter by Generation
  export function filterGeneration(zone){
-  let tarjets =""
-   let pokemonsFiltered=data.pokemon.filter((unSoloBenditoPokemon)=>{
-    tarjets +=`
-    <div class="pokemoncard">
-    <img src =${unSoloBenditoPokemon.img} class="circle"/>
-    <div class="rectangle">
-    <h4 class = "card-text">${unSoloBenditoPokemon.name}</h4>
-    <h5 class = "card-text">${unSoloBenditoPokemon.num}</h4>
-    <h5 class = "card-text">${unSoloBenditoPokemon.type}</5></div>
-    </div>
-    `;
-    filterkanto.innerHTML=tarjets;
-     return unSoloBenditoPokemon.generation.name===zone
+  let pokemonsFiltered=data.pokemon.filter((generation)=>{
+    if(generation === generation){
+      return generation.generation.name===zone
+    }/*else{ ¿como puedo retornar setCards() cuando el identificador no obtiene el valor esperado?
+      return data.pokemon === pokemon  no retorna valor en consola*/
    })
    return pokemonsFiltered
  }
 
- export function filterType(type){
-   let pokemonsType=data.pokemon.filter((unSoloBenditoPokemon)=>{
-     return unSoloBenditoPokemon.type[0]===type
-   })
-   return pokemonsType
- }
+//Filtered by type
+ export const filterByType = (type) => {
+  const pokemonsByType = pokemons.filter(function(pokemon) {
+    if(type === type){
+      return pokemon.type.includes(type)
+    }
+
+  })
+  return pokemonsByType
+}
+//Sorting AZ
+//tengo que pasar el parametro por esta funcion
+export let sortAZ = (pokeType)=>{
+  let sortedPokemons = pokeType.sort (function (a,z) { 
+    if (a.name < z.name) return -1;
+    if (a.name > z.name) return 1;
+    return 0;
+  })
+  console.log("Este es el ordenado de la A-Z", sortedPokemons)
+  return sortedPokemons
+}
+//Sorting ZA
+export let sortZA = (pokeType)=>{
+  let sortedPokemons = pokeType.sort (function (a,z) { 
+    if (a.name < z.name) return 1;
+    if (a.name > z.name) return -1;
+    return 0;
+  })
+  console.log("Este es el ordenado de la Z-A", sortedPokemons)
+  return sortedPokemons
+}
+/*//Esta funcion ordena todos los pokemones
+export let sortZA = (pokemons)=>{
+  let sortedPokemons = pokemons.sort (function (a,z) { 
+    if (a.name < z.name) return 1;
+    if (a.name > z.name) return -1;
+    return 0;
+  })
+  console.log("Este es el ordenado de la Z-A", sortedPokemons)
+  return sortedPokemons
+}*/

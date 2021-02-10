@@ -1,3 +1,4 @@
+  
 /*
 1.Posicionamiento
 2.Modelo de caja (Box model)
@@ -14,6 +15,24 @@ html.principal{
     --blue-btn: #3E66FB;
     --yellow-title: #FFCB05;
     --blue-border-title:#2B72B9;
+    --grass: rgb(40 112 55);
+    --poison: rgb(201 128 255);
+    --fire: #f38508;
+    --flying: rgb(17 164 226);
+    --water: rgb(44 86 217);
+    --bug: rgb(118 180 26 / 87%);
+    --normal: rgb(236 86 133 / 81%);
+    --electric: rgb(245 242 54);
+    --ground: rgb(115 64 64);
+    --fighting: rgb(201 18 18);
+    --psychic: rgb(234 37 179);
+    --rock: rgb(209 183 44);
+    --ghost: rgb(73 25 86 / 74%);
+    --ice: rgb(7 181 193 / 82%);
+    --dragon: rgb(251 23 23 / 75%);
+    --dark: rgb(20 22 21);
+    --steel: rgb(74 79 105 / 62%);
+    --fairy: rgb(121 64 191 / 83%);
 }
 
 *{
@@ -39,7 +58,7 @@ header{
     width: 100%;
     min-width: 288px;
     max-width: 111px;
-    height: 210px;
+    height: 150px;
     
 }
 
@@ -60,19 +79,40 @@ header{
 }
 
 h1.title{
-    width:50%;
     font-family: 'Aclonica', sans-serif;
-    font-size: 7vmax;
+    font-size: 4vmax;
     color: var(--yellow-title);
     text-shadow: 4px 2px 1px var(--blue-border-title);
     display: inline-block;
-    margin: 20px;
-    text-align: right;
+    margin: 10px 55px 10px 61px;
+}
+.generation{
+    width: 22vw;
+    height: auto;
+    margin: 20px 40px 25px 49px;
+    border-radius: 25px;
+}
+#kantostart{
+    left: 94px;
 }
 
-nav{
-    display: flex;
-    margin-left: 1000px;
+#pokemonstart{
+    left: 496.36px;
+}
+
+#jothostart{
+    left: 900px;
+}
+
+.tile-type-and-order{
+    margin:0px 3vw
+}
+
+.container--btns{
+    margin: 10px 50px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .menu{
@@ -81,6 +121,8 @@ nav{
     right: 300px;
     top: 25px;
     border-radius: 5px;
+    display: inline-flex;
+    margin: 0px 0px 10px 70vw;
 }
 
 .menu ul {
@@ -117,7 +159,7 @@ nav{
     display: block;
 }
 
-.container--cards{
+#containerCards{
     margin: 15px;
     display: inline-flex;
     flex-direction: row;
@@ -128,7 +170,115 @@ nav{
     border-style: dashed;
 }
 
-.pokemoncard{
+article.pokemon{
+    margin: 60px;
+    border-style: outset;
+}
+
+button{
+    width: 80px;
+    height: 32px;
+    top: -3px;
+    border-radius: 10px;
+    margin: 8px;
+    border: 0;
+    font-weight: bold;
+    color: rgb(233, 228, 238);
+    cursor: pointer;
+}
+
+button#grass{
+    background-color: rgb(40 112 55);
+}
+
+button#poison{
+    background-color: rgb(201 128 255);
+}
+
+button#fire{
+    background-color: #f38508;
+}
+
+button#flying{
+    background-color: rgb(17 164 226);
+}
+
+button#water{
+    background-color: rgb(44 86 217);
+}
+
+button#bug{
+    background-color: rgb(118 180 26 / 87%);
+}
+
+button#normal{
+    background-color: rgb(236 86 133 / 81%);
+}
+
+button#electric{
+    color: rgb(9, 7, 10);
+    background-color: rgb(245 242 54);
+}
+
+button#ground{
+    background-color: rgb(115 64 64);
+}
+
+button#fighting{
+    background-color: rgb(201 18 18);
+}
+
+button#psychic{
+    background-color: rgb(234 37 179);
+}
+
+button#rock{
+    background-color: rgb(209 183 44);
+}
+
+button#ghost{
+    background-color: rgb(73 25 86 / 74%);
+}
+
+button#ice{
+    background-color: rgb(7 181 193 / 82%);
+}
+
+button#dragon{
+    background-color: rgb(251 23 23 / 75%);
+}
+
+button#dark{
+    background-color: rgb(20 22 21);
+}
+
+button#steel{
+    background-color: rgb(74 79 105 / 62%);
+}
+
+button#fairy{
+    background-color: rgb(121 64 191 / 83%);
+}
+
+.tarjetas {
+    display: flex;
+    flex-direction: column auto;
+    align-items: start ;
+    background-color:transparent;
+    padding: 3em;
+}
+.idPokemon{
+    margin: 15px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color:transparent;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 15px;
+    border-style: dashed;
+}
+
+.pokemon{
     margin: 60px;
     border-style: outset;
     border-radius:16px;
@@ -146,6 +296,7 @@ nav{
     text-align: center;
     letter-spacing: 2px;
     text-transform: capitalize;
+    color: #fff;
 }
 
 .circle {
@@ -158,6 +309,7 @@ nav{
     margin: 1em auto 1em;
 }
 
+
 .rectangle {
     width: 120px; 
     height: 60px; 
@@ -166,131 +318,3 @@ nav{
     border-radius:7px;
     margin: 1em auto 1em;
 }
-
-.container--btns{
-    margin: 5px 50px;
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-button{
-    width: 80px;
-    height: 32px;
-    top: -3px;
-    border-radius: 10px;
-    margin: 8px;
-    border: 0;
-    font-weight: bold;
-    cursor: pointer;
-    color: #fff;
-    font-family: 'ABeeZee', sans-serif;
-    font-size: 17px;
-    letter-spacing: 1px;
-    text-transform: capitalize;
-}
-
-button.grass{
-    background-color: #246966;
-}
-
-button.poison{
-    background-color: #cc48d1;
-}
-
-button.fire{
-    background-color:#FF5733;
-}
-
-button.flying{
-    background-color: #48d1cc;
-}
-
-button.water{
-    background-color: #484DD1;
-}
-
-button.bug{
-    background-color: #92D148;
-}
-
-button.normal{
-    background-color: #D14891;
-}
-
-button.electric{
-    background-color: #FFC300 ;
-}
-
-button.ground{
-    background-color: #798A89;
-}
-
-button.fighting{
-    background-color: #D1484D;
-}
-
-button.psychic{
-    background-color: #C70039 ;
-}
-
-button.rock{
-    background-color: #d1cc48;
-}
-
-button.ghost{
-    background-color: #8848D1;
-}
-
-button.ice{
-    background-color: #4891D1;
-}
-
-button.dragon{
-    background-color:#900C3F;
-}
-
-button.dark{
-    background-color: #091A1A;
-}
-
-button.steel{
-    background-color: #123433;
-}
-
-button.fairy{
-    background-color: #6548D1;
-}
-
-.kantostart{
-    position: absolute;
-    width: 241px;
-    height: 158px;
-    left: 94px;
-    top: 431px;
-    border-radius: 25px;
-}
-
-.pokemonstart{
-    position: absolute;
-    width: 285.78px;
-    height: 163.96px;
-    left: 496.36px;
-    top: 431px;
-    border-radius: 25px;
-    transform: rotate(0.13deg);
-}
-
-.jothostart{
-    position: absolute;
-    width: 271px;
-    height: 164px;
-    left: 900px;
-    top: 432px;
-    border-radius: 25px;
-}
-
-
-
-
-
